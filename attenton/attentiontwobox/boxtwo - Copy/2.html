@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+    <!-- Latest Sortable -->
+    <script src="http://SortableJS.github.io/Sortable/Sortable.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="main.js" async="false"></script>
+  </head>
+
+  <body>
+    <div class="template">
+      <section class="container py-4">
+        <div class="row align-center justify-center">
+          <div class="col-xl-3 col-lg-3 col-md-4 col-sm-6 col-xs-12">
+            <h4 class="text-h5 text-center"> شغل ها  رو این جا بذار </h4>
+            <div class="row">
+              <div class="col-12 d-flex align-center justify-center">
+                <div
+                  class="drop-box d-flex align-center justify-center flex-wrap animalebg"
+                  data-category="animal"
+                ></div>
+              </div>
+            </div>
+          </div>
+          <!-- <div class="col-xl-3 col-lg-3 col-md-4 col-sm-6 col-xs-12">
+            <h4 class="text-h5 text-center">otomobils</h4>
+            <div class="row">
+              <div class="col-12 d-flex align-center justify-center">
+                <div
+                  class="drop-box d-flex align-center justify-center flex-wrap"
+                  data-category="otomobil"
+                ></div>
+              </div>
+            </div>
+          </div> -->
+          <div class="col-xl-3 col-lg-3 col-md-4 col-sm-6 col-xs-12">
+            <h4 class="text-h5 text-center">میوه ها رو این جا بذار </h4>
+            <div class="row">
+              <div class="col-12 d-flex align-center justify-center">
+                <div
+                  class="drop-box d-flex align-center justify-center flex-wrap fruitbg"
+                  data-category="fruit"
+                ></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <div class="template">
+      <section class="container pt-4 mt-4">
+        <div class="row justify-space-between pt-4 mt-4">
+          <div class="col-12">
+            <div class="row justify-center">
+              <div class="col-10">
+                <div
+                  class="item-list py-2 d-flex justify-center align-center flex-wrap"
+                  data-category="all"
+                >
+                  <!-- ajax loading content -->
+                  <!-- <div
+                    class="item mx-2 my-2"
+                    draggable="true"
+                    data-id="1"
+                    data-category="otomobil"
+                  >
+                    <img
+                      class="contain item-real"
+                      src="./assets/car.png"
+                      alt=""
+                    />
+                    <img
+                      class="contain item-shadow"
+                      src="./assets/car.png"
+                      alt=""
+                    />
+                  </div> -->
+
+                  <div
+                    class="item mx-2 my-2"
+                    draggable="true"
+                    data-id="2"
+                    data-category="fruit"
+                  >
+                    <img
+                      class="contain item-real"
+                      src="./assets/apple.png"
+                      alt=""
+                    />
+                    <img
+                      class="contain item-shadow"
+                      src="./assets/apple.png"
+                      alt=""
+                    />
+                  </div>
+
+                  <div
+                    class="item mx-2 my-2"
+                    draggable="true"
+                    data-id="3"
+                    data-category="fruit"
+                  >
+                    <img
+                      class="contain item-real"
+                      src="./assets/banana.png"
+                      alt=""
+                    />
+                    <img
+                      class="contain item-shadow"
+                      src="./assets/banana.png"
+                      alt=""
+                    />
+                  </div>
+
+                  <div
+                    class="item mx-2 my-2"
+                    draggable="true"
+                    data-id="4"
+                    data-category="fruit"
+                  >
+                    <img
+                      class="contain item-real"
+                      src="./assets/orange.png"
+                      alt=""
+                    />
+                    <img
+                      class="contain item-shadow"
+                      src="./assets/orange.png"
+                      alt=""
+                    />
+                  </div>
+
+                  <!-- <div
+                    class="item mx-2 my-2"
+                    draggable="true"
+                    data-id="5"
+                    data-category="otomobil"
+                  >
+                    <img
+                      class="contain item-real"
+                      src="./assets/bus.png"
+                      alt=""
+                    />
+                    <img
+                      class="contain item-shadow"
+                      src="./assets/bus.png"
+                      alt=""
+                    />
+                  </div>
+
+                  <div
+                    class="item mx-2 my-2"
+                    draggable="true"
+                    data-id="6"
+                    data-category="otomobil"
+                  >
+                    <img
+                      class="contain item-real"
+                      src="./assets/train.png"
+                      alt=""
+                    />
+                    <img
+                      class="contain item-shadow"
+                      src="./assets/train.png"
+                      alt=""
+                    />
+                  </div> -->
+
+                  <div
+                    class="item mx-2 my-2"
+                    draggable="true"
+                    data-id="7"
+                    data-category="fruit"
+                  >
+                    <img
+                      class="contain item-real"
+                      src="./assets/pomegranate.png"
+                      alt=""
+                    />
+                    <img
+                      class="contain item-shadow"
+                      src="./assets/pomegranate.png"
+                      alt=""
+                    />
+                  </div>
+
+                  <div
+                    class="item mx-2 my-2"
+                    draggable="true"
+                    data-id="8"
+                    data-category="animal"
+                  >
+                    <img
+                      class="contain item-real"
+                      src="./assets/monkey.png"
+                      alt=""
+                    />
+                    <img
+                      class="contain item-shadow"
+                      src="./assets/monkey.png"
+                      alt=""
+                    />
+                  </div>
+
+                  <div
+                    class="item mx-2 my-2"
+                    draggable="true"
+                    data-id="9"
+                    data-category="animal"
+                  >
+                    <img
+                      class="contain item-real"
+                      src="./assets/elephant.png"
+                      alt=""
+                    />
+                    <img
+                      class="contain item-shadow"
+                      src="./assets/elephant.png"
+                      alt=""
+                    />
+                  </div>
+
+                  <div
+                    class="item mx-2 my-2"
+                    draggable="true"
+                    data-id="10"
+                    data-category="animal"
+                  >
+                    <img
+                      class="contain item-real"
+                      src="./assets/tiger.png"
+                      alt=""
+                    />
+                    <img
+                      class="contain item-shadow"
+                      src="./assets/tiger.png"
+                      alt=""
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- <h4 class="text-h5 text-center mt-2">
+              drag and drop items in valid dropBox
+            </h4> -->
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <div class="template">
+      <div class="logBox">
+      <img src="../../../assets/giphy (15).gif"   alt="err">
+      </div>
+    </div>
+  </body>
+</html>

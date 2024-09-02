@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.8.2/css/lightbox.min.css">
+<style>
+  body {
+    overflow-x:hidden;
+}  
+  
+/* #idimg1{
+    width: 250px;
+    height: 250px;
+}
+#idimg2{
+    width: 250px;
+    height: 250px;
+}
+#idimg3{
+    width: 250px;
+    height: 250px;
+} */
+#idimg4{
+    /* width: 250px;
+    height: 250px; */
+    display: none;
+    border-radius:30%;
+}
+#idimg5{
+    /* width: 250px;
+    height: 250px; */
+    display: none;
+    border-radius:30%;
+}
+#idimg6{
+    /* width: 250px;
+    height: 250px; */
+    display: none;
+    border-radius:30%;
+}
+.photo-gallery{
+    /* margin-top: 50px;
+    padding-top: 100px;
+    padding-left: 200px; */
+    align-items: center;
+}
+#photo-gallery{
+    margin-top: 0px;
+    padding-top: 0px;
+}
+@media screen  and (min-width:600px) {
+    .photo-gallery{
+        margin-left: 120px;
+        margin-top: 160px;
+    }
+}
+</style>
+</head>
+<body>
+  
+    <div class="photo-gallery">
+        <div class="container">
+            <div class="row photos">
+              <div class="col-sm-6 col-md-4 col-lg-3 item"><img id="idimg1"  onclick="pictureclick1()" class="img-fluid" src="./Screenshot%202022-03-02%20at%2014-04-29%20Download%20Free%20Vectors,%20Clipart%20Graphics,%20Vector%20Art%20Design%20Templates.png"></div>
+                <!-- <div class="col-sm-6 col-md-4 col-lg-3 item"><img id="idimg2"   onclick="pictureclick2()" class="img-fluid" src="./memoryimages/Screenshot%202021-07-11%20at%2001-16-31%20Download%20Room%20with%20fireplace%20and%20red%20curtain%20for%20free.png"></div>
+                <div class="col-sm-6 col-md-4 col-lg-3 item"><img id="idimg3"   onclick="pictureclick3()" class="img-fluid" src="./memoryimages/Screenshot%202021-07-11%20at%2001-22-43%20Download%20kids%20on%20a%20stage%20on%20a%20beautiful%20background%20for%20free.png"></div> -->
+               
+            </div>
+        </div>
+    </div>
+    <div class="photo-gallery" id="photo-gallery">
+        <div class="container">
+            <div class="row photos">
+              <div class="col-sm-6 col-md-4 col-lg-3 item"><img id="idimg2"   onclick="pictureclick2()" class="img-fluid" src="./memoryimages/Screenshot%202021-07-11%20at%2001-25-38%20Download%20Isolated%20modern%20house%20on%20fire%20for%20free.png"></div>
+
+              <div class="col-sm-6 col-md-4 col-lg-3 item"><img id="idimg3"   onclick="pictureclick3()" class="img-fluid" src="./Screenshot%202022-03-02%20at%2014-04-29%20Download%20Free%20Vectors,%20Clipart%20Graphics,%20Vector%20Art%20Design%20Templates.png"></div>
+                <!-- <div class="col-sm-6 col-md-4 col-lg-3 item"><img id="idimg6"   onclick="pictureclick6()" class="img-fluid" src="./memoryimages/Screenshot%202021-07-11%20at%2001-28-09%20Download%20Camping%20symbol%20matches%20for%20free.png"></div> -->
+               
+            </div>
+        </div>
+    </div>
+</body>
+  <script>
+         $(function() {
+setTimeout(function() {
+     $("#idimg1").fadeOut(1500); }, 5000)
+    })
+//     $(function() {
+// setTimeout(function() {
+//      $("#idimg2").fadeOut(1500); }, 5000)
+//     })
+//     $(function() {
+// setTimeout(function() {
+//      $("#idimg3").fadeOut(1500); }, 5000)
+//     })
+ $(function(){
+    setTimeout(function(){
+        $("#idimg2").fadeIn(1500);},9000)
+    })
+    $(function(){
+    setTimeout(function(){
+        $("#idimg3").fadeIn(1500);},9000)
+    })
+    // $(function(){
+    // setTimeout(function(){
+    //     $("#idimg6").fadeIn(1500);},9000)
+    // })
+    function pictureclick3() {
+        $(function (){
+      setTimeout(function(){
+      window.location.href="./memory1item.html";
+      },3000)
+  })
+
+    // var myWindow = window.open("", "MsgWindow", "width=200,height=100,background-color= rgb(16, 230, 230),font-weight= 1000,font-size: xx-large,color= purple)"
+    // )
+    
+    // myWindow.document.write("<h1>❤🌹🌷🔥✔✨👏</h1>")
+  
+
+     
+  }
+</script>
+</body>
+</html>

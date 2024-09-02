@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"></script>
+  <style>
+
+  body {
+      position: relative; 
+  
+  font: 13px sans-serif;
+  margin: 0;
+}
+
+html {direction:rtl;
+font-family: "Droid Sans", sans-serif/*rtl:prepend:"Droid Arabic Kufi",*/;
+font-size:16px/*rtl:14px*/;
+}
+audio {
+  display: inline-block;
+  height: 40px;
+  width: calc( 100% - 650px );
+}
+
+label, button {
+  background: #f0f0f0;
+  border: 1px solid #999;
+  border-radius: 5px;
+  display: inline-block;
+  margin: 5px 10px 0;
+  padding: 8px 40px;
+  vertical-align: top;
+}
+
+label input {
+  display: none;
+}
+
+canvas {
+  display: block;
+  width: 100%;
+}
+
+#container {
+  position: relative;
+}
+
+#logo {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.info {
+  display: inline-block;
+  float: right;
+  margin: 15px 20px 0;
+}
+  .upload-music{
+      font-weight: 400;
+      font-size: large;
+      color: black;
+  }
+  </style>
+</head>
+<body data-bs-spy="scroll" data-bs-target=".navbar" data-bs-offset="50">
+
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top">
+  <div class="container-fluid">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" href="#section1">
+           تنظیمات اهنگ
+           </a>
+           
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#section2"> چرا به همراه درمان باید اهنگ پخش شود؟  </a>
+      </li>
+  
+    </ul>
+  </div>
+</nav>
+
+<div id="section1" class="container-fluid bg-success text-white" style="padding:100px 20px;">
+  <h1> تنظیمات اهنگ </h1>
+
+  <!-- <audio id="audio" src="https://streaming308.radionomy.com/fm-80" controls crossorigin></audio>
+  
+  <label class="upload-music">
+ اپلود موسیقی  
+جدید
+    <input id="upload" type="file" accept="audio/*">
+  </label>
+  
+  <button class="upload-music" id="live">پخش اهنگ </button> -->
+
+<br/><br/><br/>
+<span class="upload-music">
+
+    سلام کاربر عزیز 
+    <br/><br/>
+    <!-- لطفا موسیقی مورد علاقه کودک را با فشردن دکمه 
+    "
+    اپلود موسیقی جدید
+" 
+بارگذاری کنید یا در غیر این صورت   دکمه
+
+ "پخش اهنگ
+" -->
+
+<!-- 
+را فشار دهید   -->
+می توانید 
+  وارد این 
+  <a href="https://extraordinary-brioche-4a5b50.netlify.app/">
+ لینک
+ </a>
+  شوید  و از سیستم خود موزیک مورد نظر را اپلود کرده و ویژگی های  صدا را تعیین کنید باید در نهایت بر اساس ویژگی هایی که 
+  معین کردید کودک از صدا لذت ببرد 
+  
+   و یا می توانید از طریق این </span>
+   <a href="../Shiftpitch.html">
+     لینک 
+   </a>
+از موزیک نرم افزار استفاده کنید 
+و ویژگی پیچ صدا را با کم و زیاد کردن 
+متناسب با کودک تنظیم کنید 
+یا می توانید وارد این 
+<a href="https://soundcloud.com/user-320158268/sets/pitcher-examples">
+  لینک
+</a>
+
+شوید و صداهایی که با سطح علاقه و حسایت کودک متناسب است انتخاب کنید تا در هنگام حل تمرین ها موسیقی مورد نظر پخش شود
+<br/>
+ <br/><br/><br/>
+</span>
+<div id="section2" class="container-fluid bg-warning" style="padding:100px 20px;">
+  <h4> 
+    چرا به همراه درمان باید اهنگ پخش شود؟
+  </h4>
+  <!-- <p>Try to scroll this section and look at the navigation bar while scrolling! Try to scroll this section and look at the navigation bar while scrolling!</p>
+  <p>Try to scroll this section and look at the navigation bar while scrolling! Try to scroll this section and look at the navigation bar while scrolling!</p> -->
+<b class="text-dark">
+
+<a href="./x.html">
+  page o 
+</a>
+</b>
+</div>
+
+<script>
+  /**
+ * for documentation and more demos,
+ * visit https://audiomotion.dev
+ */
+localStorage.getItem("")
+// load module from Skypack CDN
+import AudioMotionAnalyzer from 'https://cdn.skypack.dev/audiomotion-analyzer?min';
+
+// callback function
+function pulse( analyzer ) {
+  const logo = document.getElementById('logo');
+  // use song energy to scale logo image
+  logo.height = 50 + analyzer.energy * 100;
+}
+
+// audio source
+const audioEl = document.getElementById('audio');
+
+// instantiate analyzer
+const audioMotion = new AudioMotionAnalyzer(
+  document.getElementById('container'),
+  {
+    source: audioEl,
+    height: window.innerHeight - 50,
+    mode: 3,
+    barSpace: .6,
+    showLeds: true,
+    onCanvasDraw: pulse
+  }
+);
+
+// display module version
+document.getElementById('version').innerText = `v${AudioMotionAnalyzer.version}`;
+
+// play stream
+document.getElementById('live').addEventListener( 'click', () => {
+  audioEl.src = 'https://icecast2.ufpel.edu.br/live';
+  audioEl.play();
+});
+
+// file upload
+document.getElementById('upload').addEventListener( 'change', e => {
+	const fileBlob = e.target.files[0];
+
+	if ( fileBlob ) {
+		audioEl.src = URL.createObjectURL( fileBlob );
+		audioEl.play();
+	}
+});
+  
+</script>
+
+</body>
+</html>

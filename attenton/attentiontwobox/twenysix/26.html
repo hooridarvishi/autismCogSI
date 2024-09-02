@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+    <!-- Latest Sortable -->
+    <script src="http://SortableJS.github.io/Sortable/Sortable.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="main.js" async="false"></script>
+  </head>
+
+  <body>
+    <div class="template">
+      <section class="container py-4">
+        <div class="row align-center justify-center">
+          <div class="col-xl-3 col-lg-3 col-md-4 col-sm-6 col-xs-12">
+            <h4 class="text-h5 text-center"> اعضای بدن  </h4>
+            <div class="row">
+              <div class="col-12 d-flex align-center justify-center">
+                <div
+                  class="drop-box d-flex align-center justify-center flex-wrap animalebg"
+                  data-category="animal"
+                ></div>
+              </div>
+            </div>
+          </div>
+          <div class="col-xl-3 col-lg-3 col-md-4 col-sm-6 col-xs-12">
+            <h4 class="text-h5 text-center">حیوان ها </h4>
+            <div class="row">
+              <div class="col-12 d-flex align-center justify-center">
+                <div
+                  class="drop-box d-flex align-center justify-center flex-wrap otostyle"
+                  data-category="otomobil"
+                ></div>
+              </div>
+            </div>
+          </div>
+          <div class="col-xl-3 col-lg-3 col-md-4 col-sm-6 col-xs-12">
+            <h4 class="text-h5 text-center">شغل  ها  </h4>
+            <div class="row">
+              <div class="col-12 d-flex align-center justify-center">
+                <div
+                  class="drop-box d-flex align-center justify-center flex-wrap fruitbg"
+                  data-category="fruit"
+                ></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <div class="template">
+      <section class="container pt-4 mt-4">
+        <div class="row justify-space-between pt-4 mt-4">
+          <div class="col-12">
+            <div class="row justify-center">
+              <div class="col-10">
+                <div
+                  class="item-list py-2 d-flex justify-center align-center flex-wrap"
+                  data-category="all"
+                >
+                  <!-- ajax loading content -->
+                
+
+                  <div
+                    class="item mx-2 my-2"
+                    draggable="true"
+                    data-id="2"
+                    data-category="fruit"
+                  >
+                    <img
+                      class="contain item-real"
+                      src="../../../assets/Screenshot 2022-02-26 at 16-40-06 پلیسوکتور - Google Search.png"
+                      alt=""
+                    />
+                    <img
+                      class="contain item-shadow"
+                      src="../../../assets/Screenshot 2022-02-26 at 16-40-06 پلیسوکتور - Google Search.png"
+                      alt=""
+                    />
+                  </div>
+                  <div
+                  class="item mx-2 my-2"
+                  draggable="true"
+                  data-id="10"
+                  data-category="animal"
+                >
+                  <img
+                    class="contain item-real"
+                    src="../../../assets/t.png"
+                    alt=""
+                  />
+                  <img
+                    class="contain item-shadow"
+                    src="../../../assets/t.png"
+                    alt=""
+                  />
+                </div>
+                  <div
+                    class="item mx-2 my-2"
+                    draggable="true"
+                    data-id="3"
+                    data-category="fruit"
+                  >
+                    <img
+                      class="contain item-real"
+                      src="../../../assets/Screenshot%202022-02-25%20at%2010-06-03%20Download%20Free%20Vectors,%20Clipart%20Graphics,%20Vector%20Art%20Design%20Templates.png"
+                      alt=""
+                    />
+                    <img
+                      class="contain item-shadow"
+                      src="../../../assets/Screenshot%202022-02-25%20at%2010-06-03%20Download%20Free%20Vectors,%20Clipart%20Graphics,%20Vector%20Art%20Design%20Templates.png"
+                      alt=""
+                    />
+                  </div>
+
+              
+                  <div
+                    class="item mx-2 my-2"
+                    draggable="true"
+                    data-id="5"
+                    data-category="otomobil"
+                  >
+                    <img
+                      class="contain item-real"
+                      src="../../../assets/86f2de8d-b9eb-4538-9c3e-ac3e4916ac29.jpg"
+                      alt=""
+                    />
+                    <img
+                      class="contain item-shadow"
+                      src="../../../assets/86f2de8d-b9eb-4538-9c3e-ac3e4916ac29.jpg"
+                      alt=""
+                    />
+                  </div>
+
+                  <div
+                    class="item mx-2 my-2"
+                    draggable="true"
+                    data-id="6"
+                    data-category="otomobil"
+                  >
+                    <img
+                      class="contain item-real"
+                      src="../../../assets/d9008e31-ccff-493c-963a-589aca86d426%20(Copy).jpg"
+                      alt=""
+                    />
+                    <img
+                      class="contain item-shadow"
+                      src="../../../assets/d9008e31-ccff-493c-963a-589aca86d426%20(Copy).jpg"
+                      alt=""
+                    />
+                  </div>
+  <div
+                    class="item mx-2 my-2"
+                    draggable="true"
+                    data-id="1"
+                    data-category="otomobil"
+                  >
+                    <img
+                      class="contain item-real"
+                      src="../../../assets/1176028-لذت-زیبا-سفید-بچه-گربه-کارتون-خندان-شخصیت-گربه-با-قلب-صورتی-قرمز-ilration-جدا-شده-در-پس-زمینه-سفید-بردار%20(1)%20(1).jpg"
+                      alt=""
+                    />
+                    <img
+                      class="contain item-shadow"
+                      src="../../../assets/1176028-لذت-زیبا-سفید-بچه-گربه-کارتون-خندان-شخصیت-گربه-با-قلب-صورتی-قرمز-ilration-جدا-شده-در-پس-زمینه-سفید-بردار%20(1)%20(1).jpg"
+                      alt=""
+                    />
+                  </div>
+                  <div
+                    class="item mx-2 my-2"
+                    draggable="true"
+                    data-id="7"
+                    data-category="fruit"
+                  >
+                    <img
+                      class="contain item-real"
+                      src="../../../assets/Screenshot%202022-01-20%20at%2018-11-50%2022%20نقاشی%20و%20رنگ%20آمیزی%20پلیس%20به%20مناسبت%20هفته%20نیروی%20انتظامی-1.png"
+                      alt=""
+                    />
+                    <img
+                      class="contain item-shadow"
+                      src="../../../assets/Screenshot%202022-01-20%20at%2018-11-50%2022%20نقاشی%20و%20رنگ%20آمیزی%20پلیس%20به%20مناسبت%20هفته%20نیروی%20انتظامی-1.png"
+                      alt=""
+                    />
+                  </div>
+
+                  <div
+                    class="item mx-2 my-2"
+                    draggable="true"
+                    data-id="8"
+                    data-category="animal"
+                  >
+                    <img
+                      class="contain item-real"
+                      src="../../../assets/Screenshot_2021-05-29%20nose%20vectory%20-%20Google%20Search.png"
+                      alt=""
+                    />
+                    <img
+                      class="contain item-shadow"
+                      src="../../../assets/Screenshot_2021-05-29%20nose%20vectory%20-%20Google%20Search.png"
+                      alt=""
+                    />
+                  </div>
+
+                  <div
+                    class="item mx-2 my-2"
+                    draggable="true"
+                    data-id="9"
+                    data-category="animal"
+                  >
+                    <img
+                      class="contain item-real"
+                      src="../../../assets/b.png"
+                      alt=""
+                    />
+                    <img
+                      class="contain item-shadow"
+                      src="../../../assets/b.png"
+                      alt=""
+                    />
+                  </div>
+
+                  <div
+                  class="item mx-2 my-2"
+                  draggable="true"
+                  data-id="4"
+                  data-category="fruit"
+                >
+                  <img
+                    class="contain item-real"
+                    src="../../../assets/x6.png"
+                    alt=""
+                  />
+                  <img
+                    class="contain item-shadow"
+                    src="../../../assets/x6.png"
+                    alt=""
+                  />
+                </div>
+
+                </div>
+              </div>
+            </div>
+            <!-- <h4 class="text-h5 text-center mt-2">
+              drag and drop items in valid dropBox
+            </h4> -->
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <div class="template">
+      <div class="logBox">
+      <img src="../../../assets/giphy (10).gif"   alt="err">
+      </div>
+    </div>
+  </body>
+</html>

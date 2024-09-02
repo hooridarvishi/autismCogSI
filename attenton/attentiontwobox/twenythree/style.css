@@ -1,0 +1,173 @@
+@import url("./core/css/main.css");
+.drop-box {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  background-color: transparent;
+  border-radius: 15px;
+  margin-bottom: 5rem;
+  -webkit-box-shadow: inset 0px 0px 85px -35px #fff;
+          box-shadow: inset 0px 0px 85px -35px #fff;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+.drop-box::before {
+  content: "";
+  width: 100%;
+  height: 100px;
+  background-color: rgba(255, 255, 255, 0.6);
+  position: absolute;
+  top: 100%;
+  -webkit-transform: perspective(120px) rotateX(70deg);
+          transform: perspective(120px) rotateX(70deg);
+  -webkit-filter: blur(15px);
+          filter: blur(15px);
+  pointer-events: none;
+}
+
+.drop-box .item {
+  position: relative;
+  width: 50px;
+  height: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.drop-box .item img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.drop-box .item .item-real {
+  z-index: 10;
+}
+
+.drop-box .item .item-shadow {
+  width: 70%;
+  top: 50%;
+  -webkit-transform: perspective(120px) rotateX(-60deg);
+          transform: perspective(120px) rotateX(-60deg);
+  -webkit-filter: blur(15px);
+          filter: blur(15px);
+}
+
+.item-list {
+  width: 100%;
+  height: auto;
+  background-color: transparent;
+  -webkit-box-shadow: inset 0px 0px 85px -25px #fff;
+          box-shadow: inset 0px 0px 85px -25px #fff;
+  border-radius: 15px;
+}
+
+.item-list .item {
+  position: relative;
+  width: 50px;
+  height: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.item-list .item img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.item-list .item .item-real {
+  z-index: 10;
+}
+
+.item-list .item .item-shadow {
+  width: 70%;
+  top: 50%;
+  -webkit-transform: perspective(120px) rotateX(-60deg);
+          transform: perspective(120px) rotateX(-60deg);
+  -webkit-filter: blur(15px);
+          filter: blur(15px);
+}
+
+.bg-success {
+  background-color: rgba(0, 255, 0, 0.726);
+}
+
+.bg-error {
+  background-color: rgba(255, 0, 0, 0.726);
+}
+
+.logBox {
+  position: absolute;
+  width: auto;
+  height: auto;
+  padding: 30px 30px;
+  background-color: rgba(37, 36, 36, 0.9);
+  border-radius: 15px;
+  display: none;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  font-size: 30px;
+  color: #08f156;
+  z-index: 1000;
+}
+
+.show {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.my-handle {
+  width: 20px;
+  height: 20px;
+  background-color: red;
+}
+
+@media screen and (max-width: 960px) {
+  .logBox {
+    font-size: 18px;
+  }
+}
+/*# sourceMappingURL=style.css.map */
+.drop-box{
+border:1px solid rgb(203, 63, 117);
+
+background-color: white;
+}
+.fruitbg{
+  background-image: url("../../../assets/Screenshot%202022-04-22%20at%2014-18-28%20Download%20Free%20Vectors%20Clipart%20Graphics%20Vector%20Art%20&%20Design%20Templates%20(1).png");
+  background-repeat: no-repeat;
+}
+.animalebg{
+  background-image: url("../../../assets/Screenshot_2021-05-21 a hand vector - Google Search.png");
+  background-repeat: no-repeat;
+}
+.otostyle{
+  background-image: url("../../../assets/lwt7_pyyj_161220.jpg");
+  background-repeat: no-repeat;
+}

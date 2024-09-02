@@ -1,0 +1,92 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>پازل تصاویر</title>
+    <link href="css/style.css" rel="stylesheet" />
+    <link href="css/image-puzzle.css" rel="stylesheet" />
+    <script src="js/jquery-2.1.1.min.js"></script>
+    <script src="js/jquery-ui.js"></script>
+    <script src="js/image-puzzle.js"></script>
+</head>
+<body dir="rtl">
+
+        <div id="collage">
+            <h2>پازل تصاویر</h2>
+            <hr />
+            <div id="playPanel" style="padding:5px;display:none;">
+                <h3 id="imgTitle"></h3> <hr />
+                <div style="display:inline-block; margin:auto; width:95%; vertical-align:top;">
+                    <ul id="sortable" class="sortable"></ul>
+                    <div id="actualImageBox">
+                        <div id="stepBox">
+                            <div>مراحل</div><div class="stepCount">0</div>
+                        </div>
+                        <div id="timeBox">
+                            زمان : <span id="timerPanel"></span> secs
+                        </div>
+                        <img id="actualImage" />
+                 
+                        <p id="levelPanel">
+                            <input type="radio" name="level" id="easy" checked="checked" value="3" /> <label for="easy">آسان</label>
+                            <input type="radio" name="level" id="medium" value="4" /> <label for="medium">متوسط</label>
+                            <input type="radio" name="level" id="hard" value="5" /> <label for="hard">سخت</label>
+                        </p>
+                        <div>
+                            <!-- <button id="btnRule" type="button" class="btn" onclick="rules();">نقش ها</button> -->
+                            <button id="newPhoto" type="button" class="btn">عکس های دیگر</button>
+                            <button id="btnReplay" type="button" class="btn">
+                            <a class="nostyle" href="../hardpuzzle/puzzle.html">
+                            یک بازی دیگه از پازل 
+                            </a>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="gameOver" style="display:none;">
+                <div style="background-color: #fc9e9e; padding: 5px 10px 20px 10px; text-align: center; ">
+                    <h2 style="text-align:center"></h2>
+                    تبریک <br /> شما پازل را تکمیل کردید
+                    <br />
+                    مراحل: <span class="stepCount">0</span>مرحله.
+                    <br />
+                    زمان گذشته: <span class="timeCount">0</span> ثانیه<br />
+                    <div>
+                        <button type="button" onclick="window.location.reload(true);">بازی دوباره</button>
+                    </div>
+                </div>
+            </div>
+
+            <script>
+                var images = [
+                    { src: 'images/london-bridge.jpg', title: 'London Bridge' },
+                    { src: 'images/lotus-temple.jpg', title: 'Lotus Temple' },
+                    { src: 'images/qutub-minar.jpg', title: 'Qutub Minar' },
+                    { src: 'images/statue-of-liberty.jpg', title: 'Statue Of Liberty' },
+                    { src: 'images/taj-mahal.jpg', title: 'Taj Mahal' },
+                    // { src: 'images/pic8.jpg', title: 'barnamenevisan' }
+                ];
+
+                $(function () {
+                    var gridSize = $('#levelPanel :radio:checked').val();
+                    imagePuzzle.startGame(images, gridSize);
+                    $('#newPhoto').click(function () {
+                        var gridSize = $('#levelPanel :radio:checked').val();  // Take the updated gridSize from UI.
+                        imagePuzzle.startGame(images, gridSize);
+                    });
+
+                    $('#levelPanel :radio').change(function (e) {
+                        var gridSize = $(this).val();
+                        imagePuzzle.startGame(images, gridSize);
+                    });
+                });
+                // function rules() {
+                //     alert('Re arrange the image parts in a way that it correctly forms the picture. \nThe no. of steps taken will be counted.');
+                // }
+                // function about() {
+                //     alert('مرجع تخصصی برنامه نویسان ،برنامه نویسی را از برنامه نویسان حرفه ای بیاموزید');
+                // }
+            </script>
+        </div>
+</body>
+</html>

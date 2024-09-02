@@ -1,0 +1,51 @@
+/*
+من اینجا پوزیشن ایتمها و جعبه ها رو ابسلوت گذاشتم
+تا لفت موقعیت ایکسها و تاپ موقعیت ایگرگ ها رو داشته باشه
+اینطوری در جاوا اسکریپت کارم راحت تر میشه
+*/
+
+.sGif{
+    display: none;
+}
+body {
+  background: rgb(227, 231, 226);
+  margin: 0;
+  --itemW: 100px;
+  --itemNum: 3;
+}
+
+h3 {
+  margin: 10px;
+}
+
+.target {
+  width: calc(var(--itemW) * var(--itemNum));
+  height: 140px;
+  background: #074f61;
+  border-radius: 10px;
+  border: 2px solid #eeff00;
+}
+
+.anim-target,
+.fruit-target {
+  position: absolute;
+  top: 30px;
+}
+
+.fruit-target {
+  left: 60vw;
+}
+
+.anim-target {
+  left: 20vw;
+}
+
+.items {
+  position: absolute;
+  left: 0;
+}
+
+.content * {
+  position: absolute;
+  left: 0;
+}

@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css">
+    <!-- <link rel="stylesheet" href="assets/css/style.css"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.8.2/css/lightbox.min.css">
+<style>
+    *{
+        padding-top: 20px;
+    }
+  body {
+    overflow-x:hidden;
+text-align: center;
+
+}  
+.itemx{
+
+    border: 1px solid rgb(1, 123, 150);
+/* border-radius: 50%; */
+}
+#text{
+    -webkit-box-shadow: 0px 3px 40px -5px rgba(219,175,217,0.82); 
+box-shadow: 0px 3px 40px -5px rgba(219,175,217,0.82);
+display: inline-block;
+
+}
+#idimg2{
+display: none;
+
+
+}
+#idimg3{
+display: none;
+} 
+/* #text{
+    width: 250px;
+    height: 250px;
+}
+#idimg2{
+    width: 250px;
+    height: 250px;
+}
+#idimg3{
+    width: 250px;
+    height: 250px;
+} */
+#idimg4{
+    /* width: 250px;
+    height: 250px; */
+    display: none;
+    border-radius:30%;
+}
+#idimg5{
+    /* width: 250px;
+    height: 250px; */
+    display: none;
+    border-radius:30%;
+}
+#idimg6{
+    /* width: 250px;
+    height: 250px; */
+    display: none;
+    border-radius:30%;
+}
+.photo-gallery{
+    /* margin-top: 50px;
+    padding-top: 100px;
+    padding-left: 200px; */
+    /* align-items: center; */
+    border: 1px solid rgb(160, 114, 213);
+    /* padding-top: 20px; */
+}
+#photo-gallery{
+    margin-top:0px;
+    padding-top: 0px;
+    border: 1px solid rgb(160, 114, 213);
+
+}
+
+#textQ{
+    display: none;
+    color: rgb(11, 91, 97);
+}
+.textFirst{
+    color: rgb(11, 91, 97);
+}
+.sGif{
+        display: none;
+      }
+      .photogallery{
+          display: none;
+      }
+</style>
+</head>
+<body>
+  
+    <div class="photo-gallery">
+        <div>
+            <h2 class="textFirst">
+                با دقت به صدا گوش بده
+            </h2>
+            <h2 id="textQ">
+                 صدای پخش شده به کدوم تصویر اشاره داره؟
+            </h2>
+        </div>
+        <div class="container">
+
+            <div class="row photos">
+
+              <div class="col-sm-6 col-md-4 col-lg-3 ">
+
+        <img id="idimg1"  value="PLAY"  onclick="pictureclick1()" class="img-fluid" src="../assets/giphy%20(15).gif">
+    <p class="textFirst">به امواج صدا ضربه بزن </p>
+    </div>
+                <!-- <div class="col-sm-6 col-md-4 col-lg-3 item"><img id="idimg2"   onclick="pictureclick2()" class="img-fluid" src="./assets/Screenshot%202021-07-11%20at%2001-16-31%20Download%20Room%20with%20fireplace%20and%20red%20curtain%20for%20free.png"></div>
+                <div class="col-sm-6 col-md-4 col-lg-3 item"><img id="idimg3"   onclick="pictureclick3()" class="img-fluid" src="./memoryimages/Screenshot%202021-07-11%20at%2001-22-43%20Download%20kids%20on%20a%20stage%20on%20a%20beautiful%20background%20for%20free.png"></div> -->
+                <audio id="audio" src="../musics/WhatsApp Audio 2022-03-03 at 17.09.37.mpeg"></audio> 
+            </div>
+        </div>
+    </div>
+    <div class="photogallery" >
+        <div class="container">
+            <div class="row photos">
+              <div class="col-sm-12 col-md-6 col-lg-6 itemx">
+                  <img id="idimg2"   onclick="pictureclick2()" class="img-fluid" src="../assets/Screenshot%202022-03-03%20at%2002-09-15%20Download%20Delicious%20orange%20fruit%20for%20free.png"></div>
+            
+              <img  class="sGif" src="../assets/giphy%20(28).gif" alt="err"> 
+                <div class="col-sm-12 col-md-6 col-lg-6 itemx">
+                <img id="idimg3"   onclick="pictureclick3()" class="img-fluid" src="../assets/mm.png"></div>
+                <!-- <div class="col-sm-6 col-md-4 col-lg-3 item"><img id="idimg6"   onclick="pictureclick6()" class="img-fluid" src="./memoryimages/Screenshot%202021-07-11%20at%2001-28-09%20Download%20Camping%20symbol%20matches%20for%20free.png"></div> -->
+               
+            </div>
+        </div>
+    </div>
+
+  <script>
+         $(function() {
+setTimeout(function() {
+     $("#idimg1").fadeOut(1500); }, 5000)
+    })
+    $(function() {
+setTimeout(function() {
+     $(".textFirst").fadeOut(1500); }, 5000)
+    })
+
+    $(function() {
+setTimeout(function() {
+     $("#textQ").fadeIn(1500); }, 9000)
+    })
+
+//     $(function() {
+// setTimeout(function() {
+//      $("#idimg2").fadeOut(1500); }, 5000)
+//     })
+//     $(function() {
+// setTimeout(function() {
+//      $("#idimg3").fadeOut(1500); }, 5000)
+//     })
+$(function(){
+    setTimeout(function(){
+        $(".photogallery").fadeIn(1500);},9000)
+    })
+ $(function(){
+    setTimeout(function(){
+        $("#idimg2").fadeIn(1500);},9000)
+    })
+    $(function(){
+    setTimeout(function(){
+        $("#idimg3").fadeIn(1500);},9000)
+    })
+    // $(function(){
+    // setTimeout(function(){
+    //     $("#idimg6").fadeIn(1500);},9000)
+    // })
+    function pictureclick1(){
+        var audio = document.getElementById("audio");
+        audio.play();
+    }
+    function pictureclick3() {
+        $(function (){
+      setTimeout(function(){
+      window.location.href="./Doheja1.html"
+      
+      },3000)
+  })
+  document.getElementById("idimg2").src="../assets/giphy%20(28).gif"
+ }
+ 
+</script>
+</body>
+</html>

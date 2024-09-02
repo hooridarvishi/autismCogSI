@@ -1,0 +1,116 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Picture Puzzle</title>
+    <link href="css/style.css" rel="stylesheet" />
+    <link href="css/image-puzzle.css" rel="stylesheet" />
+    <script src="js/jquery-2.1.1.min.js"></script>
+    <script src="js/jquery-ui.js"></script>
+    <script src="js/image-puzzle.js"></script>
+</head>
+<body>
+    <div id="collage">
+        <h2>Picture Puzzle</h2>
+        <hr />
+        <div id="playPanel" style="padding:5px;display:none;">
+            <h3 id="imgTitle"></h3> <hr />
+            <div style="display:inline-block; margin:auto; width:95%; vertical-align:top;">
+                <ul id="sortable" class="sortable"></ul>
+                <div id="actualImageBox">
+                    <div id="stepBox">
+                        <div>شمارش:</div><div class="stepCount">0</div>
+                    </div>
+                    <div id="timeBox">
+                        Time: <span id="timerPanel"></span> ثانیه ها
+                    </div>
+                    <img id="actualImage" />
+                    <div>عکس ها رو ببین و پازل رو حل کن .</div>
+                    <p id="levelPanel">
+                        <input type="radio" name="level" id="easy" checked="checked" value="3" /> <label for="easy">اسان </label>
+                        <input type="radio" name="level" id="medium" value="4" /> <label for="medium">متوسط </label>
+                        <input type="radio" name="level" id="hard" value="5" /> <label for="hard">سخت</label>
+						<input type="radio" name="level" id="veryhard" value="6" /> <label for="veryhard">خیلی سخت  </label>
+                    </p>
+                    <div>
+                        <button id="btnRule" type="button" class="btn" onclick="rules();">قوانین</button>
+                   
+                        <button id="newPhoto" type="button" class="btn"> عکس بعدی </button>
+                   <a href="../../SignsNandPinTable/NegativeAndPossitiveSigns1.html" class="styleText">
+                        <button id="newplay" type="button" class="btn">    بریم بازی بعدی</button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="gameOver" style="display:none;">
+            <div style="background-color: #fc9e9e; padding: 5px 10px 20px 10px; text-align: center; ">
+                <h2 style="text-align:center">Game over !!</h2>
+                <!-- Congratulations!! <br /> You got the picture ready. -->
+                تبریک
+                <br/>
+                عکس رو اماده کردی 
+                <br />
+                زمان: <span class="stepCount">0</span> gear.
+                <br />
+                <!-- Time spent -->
+             زمانی که سپری شده    : <span class="timeCount">0</span> ثانیه ها <br />
+                <div>
+                    <button type="button" onclick="window.location.reload(true);"> بازی بیشتر </button>
+                </div>
+            </div>
+        </div>
+
+        <script>
+            var images = [
+                { src: 'img/neeruti.jpg', title: 'Neeruti manor' },
+                { src: 'img/harju_madise.jpg', title: 'Harju-Madis Church' },
+                { src: 'img/rahumae.jpg', title: 'Rahumäe train station' },
+                { src: 'img/kakumae.jpg', title: 'Kakumäe Harbor' },
+                { src: 'img/kohila.jpg', title: 'Kohila mill' }
+            ];
+
+            $(function () {
+                var gridSize = $('#levelPanel :radio:checked').val();
+                imagePuzzle.startGame(images, gridSize);
+                $('#newPhoto').click(function () {
+                    var gridSize = $('#levelPanel :radio:checked').val();
+                    imagePuzzle.startGame(images, gridSize);
+                });
+
+                $('#levelPanel :radio').change(function (e) {
+                    var gridSize = $(this).val();
+                    imagePuzzle.startGame(images, gridSize);
+                });
+            });
+            function rules() {
+                // alert('Rearrange the pieces so that you get a sample image. \nThe steps taken are counted');
+                alert("تیکه های پازل رو مثل عکس مرتب کن ")
+            }
+            const buttonClicks = {
+  button1: false,
+
+};
+
+const check = () => {
+  if (buttonClicks.button1) {
+
+//   $(function (){
+//       setTimeout(function(){
+      window.open("../../SignsNandPinTable/NegativeAndPossitiveSigns1.html");
+//       },3000)
+//   })
+//   var myWindow = window.open("", "MsgWindow", "width=200,height=100,background-color= rgb(16, 230, 230),font-weight= 1000,font-size: xx-large,color= purple)"
+//     )
+//     myWindow.document.write("<h1>🌹🌷🌹🌷✔✨</h1>")
+  }
+};
+const handleClick = (buttonNum) => {
+  buttonClicks[`button${buttonNum}`] = true;
+  check();
+};
+
+document.querySelector("#newplay").onclick = () => handleClick(1);
+        </script>
+    </div>
+</body>
+</html>

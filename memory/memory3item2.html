@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    
+    <title>Document</title>
+    <style>
+@media screen and (min-width:700px) {
+    
+
+body {
+	font-family: "Fira Sans", sans-serif;
+	background-color: #f1f1f1;
+	margin-top: 85px ;
+    overflow-x: hidden;
+}
+#idimg1,#idimg2,#idimg3{
+    width: 250px;
+    height: 250px;
+    margin-left: 10px;
+    margin-right: 10px;
+    padding-left: 5px;
+    display: inline;
+}
+/* #idimg1{
+    margin-left: 60px;
+} */
+#idimg4, #idimg5 ,#idimg6, #idimg7{
+    display: none;
+    overflow: none;
+    width: 250px;
+    height: 250px;
+    /* margin-left: 400px; */
+}
+#allfirstsection{
+
+display: inline;
+
+}
+
+#rowfirst{
+    margin-left: 200px;
+}
+}
+@media screen and (max-width:600px) {
+    #idimg4, #idimg5 ,#idimg6, #idimg7{
+    display: none;
+    overflow: none;
+
+    /* margin-left: 400px; */
+}
+}
+.gifStyle{
+    display: none;
+}
+.text1{
+
+    color: rgb(235, 89, 10);
+}
+.sectionItem{
+    margin-left: 400px !important;
+}
+.sec2{
+    display: none;
+    color: rgb(235, 89, 10);;
+}
+    </style>
+</head>
+<body>
+<section class="container">
+   <div id="allpage" class="row gallery">
+    <section class="sectionItem">
+        <h2 class="text1">
+        عکس ها رو به خاطر بسپار 
+        </h2>
+        <h2 class="sec2">
+     سه تا از عکس هایی که در تمرین قبل دیدی رو انتخاب کن
+            </h2>
+    </section>
+        <div class="container">
+            
+            <div class="row">
+       
+            <div id="rowfirst" class="row">
+        
+             <img class="col-sm-4"  src="./assets/Screenshot 2022-03-03 at 02-09-15 Download Delicious orange fruit for free.png"  id="idimg1">
+
+            <img class="col-md-4" src="./assets/Screenshot%202022-03-03%20at%2002-06-30%20Download%20Glass%20sphere%20orange,%20vector%20shiny%20ball%20for%20free.png" id="idimg2" alt="Nature" >
+              
+            <img class="col-sm-4" id="idimg3" src="./assets/Screenshot 2022-03-03 at 01-52-24 Set of beach and soccer balls Vector 3D realistic glossy balls Isolated illustration on a[...].png">
+      <!-- </div> -->
+ 
+      </div>
+
+            <div class="row">
+                <div class="col-sm-1"></div>
+                <div id="imagesshow" class="col-md-5">
+                <img src="./assets/Screenshot 2022-03-03 at 04-06-48 Download Orange Fruit Vector for free.png" id="idimg4" alt="Fjords">
+                </div>
+                <img src="./assets/ggiphy.gif" class="gifStyle">
+                <div id="imagesshow" class="col-md-5">
+                <img src="./assets/Screenshot 2022-03-03 at 01-52-24 Set of beach and soccer balls Vector 3D realistic glossy balls Isolated illustration on a[...].png" id="idimg5" alt="Fjords">
+                </div>
+                <div class="col-sm-1"></div>
+            </div>
+            <div class="row">
+                <div class="col-sm-1"></div>
+                <div id="imagesshow" class="col-md-5">
+                <img src="./assets/Screenshot 2022-03-03 at 02-09-15 Download Delicious orange fruit for free.png" id="idimg6" alt="Fjords">
+                </div>
+                <div id="imagesshow" class="col-md-5">
+                <img src="./assets/Screenshot%202022-03-03%20at%2002-06-30%20Download%20Glass%20sphere%20orange,%20vector%20shiny%20ball%20for%20free.png" id="idimg7" alt="Fjords">
+                </div>
+                <div class="col-sm-1"></div>
+
+            </div>
+  </div></div>
+  
+        </div>
+    </section> 
+  
+    <script>
+        $(function() {
+setTimeout(function() {
+     $("#idimg1").fadeOut(1500); }, 5000)
+    })
+    $(function() {
+setTimeout(function() {
+     $("#idimg2").fadeOut(1500); }, 5000)
+    })  
+ $(function(){
+    setTimeout(function(){
+        $("#idimg3").fadeOut(1500);},5000)
+    })
+    $(function(){
+    setTimeout(function(){
+        $(".text1").fadeOut(1500);},5000)
+    })
+    $(function(){
+    setTimeout(function(){
+        $("#idimg4").fadeIn(1500);},9000)
+    })
+    $(function(){
+    setTimeout(function(){
+        $("#idimg5").fadeIn(1500);},9000)
+    })
+    $(function(){
+    setTimeout(function(){
+        $("#idimg6").fadeIn(1500);},9000)
+    })
+    $(function(){
+    setTimeout(function(){
+        $("#idimg7").fadeIn(1500);},9000)
+    })
+    $(function(){
+    setTimeout(function(){
+        $(".sec2").fadeIn(1500);},9000)
+    })
+    const buttonClicks = {
+  button1: false,
+  button2: false,
+  button3:false
+};
+
+const check = () => {
+  if (buttonClicks.button1 && buttonClicks.button2 && buttonClicks.button3) {
+
+  $(function (){
+      setTimeout(function(){
+      window.location.href="./MemoryVerb1item1.html";
+      },3000)
+  })
+document.getElementById("idimg4").src="./assets/ggiphy.gif"
+  }
+};
+const handleClick = (buttonNum) => {
+  buttonClicks[`button${buttonNum}`] = true;
+  check();
+};
+
+document.querySelector("#idimg5").onclick = () => handleClick(1);
+document.querySelector("#idimg6").onclick = () => handleClick(2);
+document.querySelector("#idimg7").onclick = () => handleClick(3);
+
+    </script>  
+</body>
+</html>

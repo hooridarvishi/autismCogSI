@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta  charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        *{
+            direction: rtl;
+            
+       background-repeat: no-repeat;
+        }
+       .container{
+           /* background-color: pink;  */
+            border: 1px solid rgb(201, 179, 186);
+           margin-top: 100px;
+ 
+           background-image: url("Screenshot%202022-03-04%20at%2013-01-56%20Download%20Happy%20cute%20kid%20boy%20and%20girl%20character%20wearing%20beautiful%20outfits%20standing%20togethe[...].png");
+       } 
+       b , h3 {
+            font-weight: 700;
+           color: rgb(36, 179, 211);
+        }
+        body{
+            max-height: 100%;
+         
+        }
+        li{
+            font-weight: 1000;
+            font-size: larger;
+        }
+        a{
+            text-decoration: none;
+            color: white !important
+        }
+        @import 'https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300';
+
+html,
+body {
+  /* width: 100%;
+  height: 100%; */
+  /* overflow: hidden;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  font-family: 'Open Sans Condensed', sans-serif; */
+}
+
+div[class*=box] {
+height: 23.33%;
+width: 30%; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.box-1 {background-color: #FF6766; }
+.box-2 { background-color: #0b07dc; }
+.box-3 { background-color: #66A182; }
+
+.btn {
+line-height: 50px;
+height: 40px;
+text-align: center;
+width: 250px;
+cursor: pointer;
+}
+
+/* 
+========================
+      BUTTON ONE
+========================
+*/
+.btn-one {
+color: #FFF;
+transition: all 0.3s;
+position: relative;
+}
+.btn-one span {
+transition: all 0.3s;
+}
+.btn-one::before {
+content: '';
+position: absolute;
+bottom: 0;
+left: 0;
+width: 100%;
+height: 100%;
+z-index: 1;
+opacity: 0;
+transition: all 0.3s;
+border-top-width: 1px;
+border-bottom-width: 1px;
+border-top-style: solid;
+border-bottom-style: solid;
+border-top-color: rgba(255,255,255,0.5);
+border-bottom-color: rgba(255,255,255,0.5);
+transform: scale(0.1, 1);
+}
+.btn-one:hover span {
+letter-spacing: 2px;
+}
+.btn-one:hover::before {
+opacity: 1;
+transform: scale(1, 1);
+}
+.btn-one::after {
+content: '';
+position: absolute;
+bottom: 0;
+left: 0;
+width: 100%;
+height: 100%;
+z-index: 1;
+transition: all 0.3s;
+background-color: rgba(255,255,255,.1);
+color: black;
+}
+.btn-one:hover::after {
+opacity: 0;
+transform: scale(0.1, 1);
+color: black;
+}
+
+
+/* 
+========================
+      BUTTON TWO
+========================
+*/
+.btn-two {
+color: #FFF;
+transition: all 0.5s;
+position: relative;
+}
+.btn-two span {
+z-index: 2;
+display: block;
+position: absolute;
+width: 100%;
+height: 100%;
+}
+.btn-two::before {
+content: '';
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+z-index: 1;
+transition: all 0.5s;
+border: 1px solid rgba(255,255,255,0.2);
+background-color: rgba(255,255,255);
+}
+.btn-two::after {
+content: '';
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+z-index: 1;
+transition: all 0.5s;
+border: 1px solid rgba(255,255,255,0.2);
+background-color: rgba(233, 66, 66);
+}
+.btn-two:hover::before {
+  transform: rotate(-45deg);
+  background-color: rgba(255,255,255,0);
+}
+.btn-two:hover::after {
+  transform: rotate(45deg);
+  background-color: rgba(255,255,255,0);
+}
+
+
+/* 
+========================
+      BUTTON THREE
+========================
+*/
+.btn-three {
+color: #FFF;
+transition: all 0.5s;
+position: relative;
+}
+.btn-three::before {
+content: '';
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+z-index: 1;
+background-color: rgba(29, 145, 58, 0.1);
+transition: all 0.3s;
+}
+.btn-three:hover::before {
+opacity: 0 ;
+transform: scale(0.5,0.5);
+}
+.btn-three::after {
+content: '';
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+z-index: 1;
+opacity: 0;
+transition: all 0.3s;
+border: 1px solid rgba(255,255,255,0.5);
+transform: scale(1.2,1.2);
+}
+.btn-three:hover::after {
+opacity: 1;
+transform: scale(1,1);
+}
+h3{
+    color: black;
+}
+    </style>
+    <title>Document</title>
+</head>
+<body>
+   <div class="container">
+<div>
+    <h1><b>
+   
+        
+        در مرحله بعد چند تا بازی هست که هر کدوم رو که دوست داشتی می تونی بازی کنی و لذت ببری 
+        <br/>
+         روی بازی که دوست داری ضربه بزن 
+    </b>
+<br><br><br>
+
+</h1>
+    <h3 class="h3">
+        می تونی 
+    برای توضیح هر بازی به صفحه اصلی نرم افزار / قسمت راهنمایی/ اشنایی با بازی ها مراجعه کنی
+    </h3>
+</div>
+<br><br><br>
+<div>
+   <!-- <ul>
+       <li><a href="./../ProblemSolving/plays/playfirst/pingpongplay/index.html">
+           بازی پینگ پنگ
+       </a></li>
+
+       <li>
+           <a href="file:///D:/autism%20app/autism%20app/ProblemSolving/plays/playthird/ninjaplay/index.html">
+               بازی نینجا
+           </a>
+       </li>
+       <li>
+           <a href="file:///D:/autism%20app/autism%20app/ProblemSolving/plays/playsecond/FROGTASTIC/index.html">
+               بازی غورباقه 
+           </a>
+       </li>
+   </ul>  -->
+   <!-- Hover #1 -->
+<div class="box-1">
+    <div class="btn btn-one">
+      <span>
+        <a href="./plays/playfirst/pingpongplay/index.html">
+            بازی پینگ پنگ
+        </a>   
+      </span>
+    </div>
+  </div>
+   
+  <!-- Hover #2 -->
+  <div class="box-2">
+    <div class="btn btn-two">
+      <span>
+        <a href="./plays/playthird/ninjaplay/index.html">
+            بازی نینجا
+        </a>
+      </span>
+    </div>
+  </div>
+  
+  <!-- Hover #3 -->
+  <div class="box-3">
+    <div class="btn btn-three">
+      <span>
+        <a href="./plays/playsecond/FROGTASTIC/index.html">
+            بازی غورباقه 
+        </a>
+      </span>
+    </div>
+  </div>
+  
+</div>
+   </div>
+   
+</body>
+</html>

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <title>Document</title>
+    <style>
+        *{
+            direction: rtl;
+        }
+        section{
+            background-image: url("./Screenshot%202022-01-27%20at%2001-18-07%20Download%20Prius%20Car%20Illustration.png");
+     
+  /* opacity: 0.8; */
+  height: 300px;
+}
+h3,b,div{
+    background-color: rgb(0, 255, 208);
+    margin: 40px;
+}
+.sgi{
+  display: none;
+}
+/* .imgAdd{
+  display: none;
+} */
+    </style>
+</head>
+<body>
+
+      <div>
+          <h3>
+             در یک خیابان ماشین و دوچرخه وجود دارد . آن ها روی هم شانزده چرخ دارند . در این خیابان 
+            چند ماشین و چند تا دوچرخه است
+          </h3>
+          
+<form action="/action_page.php"  >
+
+    <input type="radio" id="first" name="fav_language" value="HTML">
+    <label for="html">
+        <b>
+سه ماشین و یک دوچرخه
+    </label><br>
+    <input type="radio" id="second" name="fav_language" value="CSS">
+    <label  for="css">
+        <b>
+دو ماشین و هشت دوچرخه
+</b>
+    </label><br>
+    <input type="radio" id="idimg1" name="fav_language" value="JavaScript">
+    <label for="javascript">
+        <b>
+سه ماشین و دو  دوچرخه
+</b>
+    </label>
+
+  <br/>
+    <input  type="radio" id="forth" name="fav_language" value="JavaScript">
+    <label for="javascript">
+        <b>
+شش ماشین و صفر دوچرخه 
+</b>
+    </label>
+  </form>
+
+      <img src="../memory/assets/giphy (31).gif" class="sgi">
+      <section>
+<img id="nn" src="./Screenshot%202022-01-27%20at%2001-18-07%20Download%20Prius%20Car%20Illustration.png">
+</section>
+<!-- 
+<img class="imgAdd" src="../assets/3j9l_93r2_131207.jpg"   > -->
+</div>
+  <script>
+   const buttonClicks = {
+  button1: false,
+
+};
+
+const check = () => {
+  if (buttonClicks.button1) {
+
+  $(function (){
+      setTimeout(function(){
+      window.location.href="./Math2.html";
+      },3000)
+  })
+  // var myWindow = window.open("", "MsgWindow", "width=200,height=100,background-color= rgb(16, 230, 230),font-weight= 1000,font-size: xx-large,color= purple)"
+  //   )
+  //   myWindow.document.write("")
+  document.getElementById("nn").src="../memory/assets/giphy (31).gif"
+ console.log("mm")
+}
+};
+const handleClick = (buttonNum) => {
+  buttonClicks[`button${buttonNum}`] = true;
+  check();
+};
+
+document.querySelector("#idimg1").onclick = () => handleClick(1);
+  </script>
+</body>
+</html>

@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+    <!-- Latest Sortable -->
+    <script src="http://SortableJS.github.io/Sortable/Sortable.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="main.js" async="false"></script>
+  </head>
+
+  <body>
+    <div class="template">
+      <section class="container py-4">
+        <div class="row align-center justify-center">
+          <div class="col-xl-3 col-lg-3 col-md-4 col-sm-6 col-xs-12">
+            <h4 class="text-h5 text-center"> پوشاک  </h4>
+            <div class="row">
+              <div class="col-12 d-flex align-center justify-center">
+                <div
+                  class="drop-box d-flex align-center justify-center flex-wrap animalebg"
+                  data-category="animal"
+                ></div>
+              </div>
+            </div>
+          </div>
+          <!-- <div class="col-xl-3 col-lg-3 col-md-4 col-sm-6 col-xs-12">
+            <h4 class="text-h5 text-center">otomobils</h4>
+            <div class="row">
+              <div class="col-12 d-flex align-center justify-center">
+                <div
+                  class="drop-box d-flex align-center justify-center flex-wrap"
+                  data-category="otomobil"
+                ></div>
+              </div>
+            </div>
+          </div> -->
+          <div class="col-xl-3 col-lg-3 col-md-4 col-sm-6 col-xs-12">
+            <h4 class="text-h5 text-center">حیوان  ها  </h4>
+            <div class="row">
+              <div class="col-12 d-flex align-center justify-center">
+                <div
+                  class="drop-box d-flex align-center justify-center flex-wrap fruitbg"
+                  data-category="fruit"
+                ></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <div class="template">
+      <section class="container pt-4 mt-4">
+        <div class="row justify-space-between pt-4 mt-4">
+          <div class="col-12">
+            <div class="row justify-center">
+              <div class="col-10">
+                <div
+                  class="item-list py-2 d-flex justify-center align-center flex-wrap"
+                  data-category="all"
+                >
+                  <!-- ajax loading content -->
+                  <!-- <div
+                    class="item mx-2 my-2"
+                    draggable="true"
+                    data-id="1"
+                    data-category="otomobil"
+                  >
+                    <img
+                      class="contain item-real"
+                      src="./assets/car.png"
+                      alt=""
+                    />
+                    <img
+                      class="contain item-shadow"
+                      src="./assets/car.png"
+                      alt=""
+                    />
+                  </div> -->
+
+                  <div
+                    class="item mx-2 my-2"
+                    draggable="true"
+                    data-id="2"
+                    data-category="fruit"
+                  >
+                    <img
+                      class="contain item-real"
+                      src="../../../assets/Screenshot 2022-04-22 at 12-30-11 Download Free Vectors Clipart Graphics Vector Art & Design Templates.png"
+                      alt=""
+                    />
+                    <img
+                      class="contain item-shadow"
+                      src="../../../assets/Screenshot 2022-04-22 at 12-30-11 Download Free Vectors Clipart Graphics Vector Art & Design Templates.png"
+                      alt=""
+                    />
+                  </div>
+                  <div
+                  class="item mx-2 my-2"
+                  draggable="true"
+                  data-id="10"
+                  data-category="animal"
+                >
+                  <img
+                    class="contain item-real"
+                    src="../../../assets/Screenshot%202022-02-27%20at%2001-02-53%20Download%20Free%20Clothes%20Vectors%20for%20free-1.png"
+                    alt=""
+                  />
+                  <img
+                    class="contain item-shadow"
+                    src="../../../assets/Screenshot%202022-02-27%20at%2001-02-53%20Download%20Free%20Clothes%20Vectors%20for%20free-1.png"
+                    alt=""
+                  />
+                </div>
+                  <div
+                    class="item mx-2 my-2"
+                    draggable="true"
+                    data-id="3"
+                    data-category="fruit"
+                  >
+                    <img
+                      class="contain item-real"
+                      src="../../../assets/66d6a014-4e2a-4010-9f14-b021046d9157%20(Copy).jpg"
+                      alt=""
+                    />
+                    <img
+                      class="contain item-shadow"
+                      src="../../../assets/66d6a014-4e2a-4010-9f14-b021046d9157%20(Copy).jpg"
+                      alt=""
+                    />
+                  </div>
+
+              
+                  <!-- <div
+                    class="item mx-2 my-2"
+                    draggable="true"
+                    data-id="5"
+                    data-category="otomobil"
+                  >
+                    <img
+                      class="contain item-real"
+                      src="./assets/bus.png"
+                      alt=""
+                    />
+                    <img
+                      class="contain item-shadow"
+                      src="./assets/bus.png"
+                      alt=""
+                    />
+                  </div>
+
+                  <div
+                    class="item mx-2 my-2"
+                    draggable="true"
+                    data-id="6"
+                    data-category="otomobil"
+                  >
+                    <img
+                      class="contain item-real"
+                      src="./assets/train.png"
+                      alt=""
+                    />
+                    <img
+                      class="contain item-shadow"
+                      src="./assets/train.png"
+                      alt=""
+                    />
+                  </div> -->
+
+                  <div
+                    class="item mx-2 my-2"
+                    draggable="true"
+                    data-id="7"
+                    data-category="fruit"
+                  >
+                    <img
+                      class="contain item-real"
+                      src="../../../assets/Screenshot%202022-04-22%20at%2012-41-48%20Download%20Free%20Vectors%20Clipart%20Graphics%20Vector%20Art%20&%20Design%20Templates.png"
+                      alt=""
+                    />
+                    <img
+                      class="contain item-shadow"
+                      src="../../../assets/Screenshot%202022-04-22%20at%2012-41-48%20Download%20Free%20Vectors%20Clipart%20Graphics%20Vector%20Art%20&%20Design%20Templates.png"
+                      alt=""
+                    />
+                  </div>
+
+                  <div
+                    class="item mx-2 my-2"
+                    draggable="true"
+                    data-id="8"
+                    data-category="animal"
+                  >
+                    <img
+                      class="contain item-real"
+                      src="../../../assets/Screenshot 2022-03-01 at 15-20-49 Download Bomber Jacket Mock ups Sublimated for free (2)-1.png"
+                      alt=""
+                    />
+                    <img
+                      class="contain item-shadow"
+                      src="../../../assets/Screenshot 2022-03-01 at 15-20-49 Download Bomber Jacket Mock ups Sublimated for free (2)-1.png"
+                      alt=""
+                    />
+                  </div>
+
+                  <div
+                    class="item mx-2 my-2"
+                    draggable="true"
+                    data-id="9"
+                    data-category="animal"
+                  >
+                    <img
+                      class="contain item-real"
+                      src="../../../assets/Screenshot%202022-02-26%20at%2017-45-15%20Download%20Colorful%20Shoes.png"
+                      alt=""
+                    />
+                    <img
+                      class="contain item-shadow"
+                      src="../../../assets/Screenshot%202022-02-26%20at%2017-45-15%20Download%20Colorful%20Shoes.png"
+                      alt=""
+                    />
+                  </div>
+
+                  <div
+                  class="item mx-2 my-2"
+                  draggable="true"
+                  data-id="4"
+                  data-category="fruit"
+                >
+                  <img
+                    class="contain item-real"
+                    src="../../../assets/Screenshot%202022-04-22%20at%2012-50-48%20Cat%20Free%20Vector%20Art%20&%20Illustrations%208%20000%20Downloadable%20Files.png"
+                    alt=""
+                  />
+                  <img
+                    class="contain item-shadow"
+                    src="../../../assets/Screenshot%202022-04-22%20at%2012-50-48%20Cat%20Free%20Vector%20Art%20&%20Illustrations%208%20000%20Downloadable%20Files.png"
+                    alt=""
+                  />
+                </div>
+
+                </div>
+              </div>
+            </div>
+            <!-- <h4 class="text-h5 text-center mt-2">
+              drag and drop items in valid dropBox
+            </h4> -->
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <div class="template">
+      <div class="logBox">
+      <img src="../../../assets/giphy (9).gif"   alt="err">
+      </div>
+    </div>
+  </body>
+</html>

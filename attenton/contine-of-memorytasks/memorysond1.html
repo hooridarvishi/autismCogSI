@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <title>Document</title>
+    <style>
+        *{
+            overflow: none;
+        }
+        .tex-qustion{
+            color:blueviolet;
+            display: flex;
+  justify-content: center;
+        }
+        .all-part{
+         
+            -webkit-box-shadow: 0px 2px 30px -2px rgba(0,0,0,0.77); 
+box-shadow: 0px 2px 30px -2px rgba(0,0,0,0.77);
+
+        }
+        .gifS{
+            display: none;
+        }
+    </style>
+</head>
+<body>
+<div class="m-2">
+    <p>
+        <h2 class="tex-qustion">
+            این صدا مال کدوم عکسه؟
+        </h2>
+        <br/>
+        <div class="all-part row">
+            <div class="video col-md-6 col-sm-4 m-2">
+        <video controls>
+            <source src="./WhatsApp%20Video%202022-01-26%20at%2011.06.48.mp4" type="video/mp4">
+
+            Your browser does not support HTML video.
+          </video>
+
+        </div>
+        <div class="col-md-4">
+    <div class="row">
+        <img src="./Screenshot%202022-01-26%20at%2011-39-22%20Download%20Free%20Vectors,%20Clipart%20Graphics,%20Vector%20Art%20Design%20Templates.png"
+         class="col-md-6" id="idimg1"/>
+        <img src="./Screenshot%202022-01-26%20at%2011-40-43%20Download%20Free%20Vectors,%20Clipart%20Graphics,%20Vector%20Art%20Design%20Templates.png"
+         class="col-md-6"/>
+        <img src="./Screenshot%202022-01-26%20at%2011-47-43%20Download%20Free%20Vectors,%20Clipart%20Graphics,%20Vector%20Art%20Design%20Templates.png" 
+        class="col-md-6" id="id2"  />
+        <img src="./Screenshot%202022-01-26%20at%2011-45-48%20Download%20Free%20Vectors,%20Clipart%20Graphics,%20Vector%20Art%20Design%20Templates.png" 
+        class="col-md-6"/>
+    </div>
+        </div>
+        </div>
+        <img class="gifS" src="../memory/assets//giphy_s.gif">
+    </p>
+    </div>
+    <script>
+           const buttonClicks = {
+  button1: false,
+
+};
+
+const check = () => {
+  if (buttonClicks.button1) {
+    $(function (){
+      setTimeout(function(){
+      window.location.href="./memorysond2.html";
+      },3000)
+  })
+    // var myWindow = window.open("", "MsgWindow", "width=200,height=100,background-color= rgb(16, 230, 230),font-weight= 1000,font-size: xx-large,color= purple)"
+    // )
+    // myWindow.document.write("<h1>🌹🌷🌹🌷✔✨</h1>")
+document.getElementById("id2").src="../memory/assets/giphy_s.gif"
+  }
+};
+const handleClick = (buttonNum) => {
+  buttonClicks[`button${buttonNum}`] = true;
+  check();
+};
+
+document.querySelector("#idimg1").onclick = () => handleClick(1);
+    </script>
+</body>
+</html>
